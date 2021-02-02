@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NWS Weather</string>
+    <string name="alerts">Alerts</string>
+    <string name="dialog_ok">OK</string>
+    <string name="nws_user_agent">Trail Sense, trailsense@protonmail.com</string>
+    <string name="forecast">Forecast</string>
+</resources>
