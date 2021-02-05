@@ -4,6 +4,12 @@
     tools:context=".ui.MainActivity">
 
     <item
+        android:id="@+id/current_fragment"
+        android:icon="@drawable/forecast"
+        android:title="@string/current"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/alerts_fragment"
         android:icon="@drawable/alert"
         android:title="@string/alerts"

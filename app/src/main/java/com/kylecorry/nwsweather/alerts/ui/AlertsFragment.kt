@@ -119,6 +119,10 @@ class AlertsFragment : Fragment() {
             }
             withContext(Dispatchers.Main) {
                 listView.setData(alerts)
+
+                if (alerts.isEmpty()){
+                    UiUtils.shortToast(requireContext(), getString(R.string.no_alerts))
+                }
             }
         }
         return false

@@ -4,4 +4,19 @@
     <string name="dialog_ok">OK</string>
     <string name="nws_user_agent">Trail Sense, trailsense@protonmail.com</string>
     <string name="forecast">Forecast</string>
+    <string name="current">Current</string>
+    <string name="temperature">Temperature</string>
+    <string name="dewpoint">Dewpoint</string>
+    <string name="heat_index">Heat Index</string>
+    <string name="pressure">Pressure</string>
+    <string name="sea_level_pressure">Sea Level Pressure</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="wind_gust">Wind Gust</string>
+    <string name="wind_chill">Wind Chill</string>
+    <string name="wind_direction">Wind Direction</string>
+    <string name="visibility">Visibility</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="no_alerts">No active alerts</string>
 </resources>
