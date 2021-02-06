@@ -12,6 +12,7 @@ import com.kylecorry.nationalweatherservice.Alert
 import com.kylecorry.nationalweatherservice.NationalWeatherServiceProxy
 import com.kylecorry.nwsweather.FormatService
 import com.kylecorry.nwsweather.R
+import com.kylecorry.nwsweather.alerts.domain.AlertUtils
 import com.kylecorry.nwsweather.infrastructure.CustomGPS
 import com.kylecorry.trailsensecore.infrastructure.system.IntentUtils
 import com.kylecorry.trailsensecore.infrastructure.system.NotificationUtils
@@ -55,19 +56,14 @@ class AlertService : Service() {
         val currentIds = alerts.map { it.id }
         alerts.filter { !lastIds.contains(it.id) }.forEachIndexed { index, alert ->
             val name = alert.event
-            val start = alert.onset.toInstant()
-            val end = alert.ends.toInstant()
-
-            val now = Instant.now()
-
-            val timeString =
-                "${if (now > start) "Now" else formatService.formatDateTime(start)} - ${
-                    formatService.formatDateTime(end)
-                }"
+            val start = AlertUtils.getStart(alert)
+            val end = AlertUtils.getEnd(alert)
+            val timeString = formatService.formatDateTimeRange(start, end)
+            val severity = formatService.formatSeverity(alert.severity)
 
             val notification = NotificationUtils.builder(applicationContext, "WeatherAlerts")
                 .setContentTitle(name)
-                .setContentText(timeString)
+                .setContentText("$timeString [$severity]")
                 .setSmallIcon(R.drawable.alert)
                 .build()
 

@@ -19,4 +19,10 @@
     <string name="humidity">Humidity</string>
     <string name="wind">Wind</string>
     <string name="no_alerts">No active alerts</string>
+    <string name="now">Now</string>
+    <string name="unknown">Unknown</string>
+    <string name="minor">Minor</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+    <string name="extreme">Extreme</string>
 </resources>
